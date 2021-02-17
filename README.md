@@ -12,7 +12,7 @@ as we go in the depth direction.
 ## How to use it for PyTorch ?
 
 The following is a snippet on how to do it in PyTorch, where we apply
-it to the `ResNet-101` initialized randomly.
+it to the `ResNet-18` initialized randomly.
 Following [Brock et al., 2021](https://arxiv.org/abs/2101.08692), there are
 two kinds of values that can be visualized for each, the average channel variance
 and the average channel squared mean.
