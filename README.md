@@ -33,7 +33,7 @@ plt.savefig("plot.png")
 ```
 
 
-![](spp.png)
+![spp.png](spp.png)
 
 ## How to use it for TensorFlow ?
 
