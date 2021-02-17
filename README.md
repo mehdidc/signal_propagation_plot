@@ -18,18 +18,22 @@ two kinds of values that can be visualized for each, the average channel varianc
 and the average channel squared mean.
 
 ```python
-    from signal_propagation_plot.pytorch import get_average_channel_variance_by_depth
-    from signal_propagation_plot.pytorch import get_average_squared_mean_by_depth
-    from signal_propagation_plot.pytorch import plot
-    import torchvision
-    import matplotlib.pyplot as plt
-    model = torchvision.models.resnet101()
-    x = torch.randn(64,3,224,224)
-    values = get_average_channel_variance_by_depth(model, x)
-    fig = plt.figure()
-    plot(values)
-    plt.show()
+import torch
+from signal_propagation_plot.pytorch import get_average_channel_variance_by_depth
+from signal_propagation_plot.pytorch import get_average_channel_squared_mean_by_depth
+from signal_propagation_plot.pytorch import plot
+import torchvision
+import matplotlib.pyplot as plt
+model = torchvision.models.resnet18()
+x = torch.randn(64,3,224,224)
+values = get_average_channel_variance_by_depth(model, x)
+fig = plt.figure(figsize=(20, 18))
+plot(values)
+plt.savefig("plot.png")
 ```
+
+
+![](spp.png)
 
 ## How to use it for TensorFlow ?
 
